@@ -1,0 +1,10 @@
+<div>
+  <.live_component
+    title={@page_title}
+    id={@task.id || :new}
+    module={Demo1Web.TaskLive.TaskFormComponent}
+    action={@live_action}
+    task={@task}
+    path={~p"/tasks/new"}
+  />
+</div>

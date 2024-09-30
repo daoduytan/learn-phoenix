@@ -1,0 +1,13 @@
+<.header>
+  Hello
+  <:actions>
+    <.link patch={~p"/tasks/new"}>
+      New Task
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="tasks" rows={@streams.tasks}>
+  <:col :let={{_id, task}} label="Title"><%= task.title %></:col>
+  <:col :let={{_id, task}} label="Completed"><%= task.completed %></:col>
+</.table>
