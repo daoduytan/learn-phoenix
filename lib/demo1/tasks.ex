@@ -8,6 +8,12 @@ defmodule Demo1.Tasks do
     Repo.all(Task)
   end
 
+  def create_task(attrs \\ %{}) do
+    %Task{}
+    |> Task.changeset(attrs)
+    |> Repo.insert()
+  end
+
   def change_task(%Task{} = task, attrs \\ %{}) do
     Task.changeset(task, attrs)
   end

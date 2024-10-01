@@ -9,5 +9,5 @@
 
 <.table id="tasks" rows={@streams.tasks}>
   <:col :let={{_id, task}} label="Title"><%= task.title %></:col>
-  <:col :let={{_id, task}} label="Completed"><%= task.completed %></:col>
+  <:col :let={{_id, task}} label="Completed"><%= task.status %></:col>
 </.table>
